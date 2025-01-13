@@ -78,8 +78,9 @@ a:hover {
     line-height: 1.5;
     margin-top: 1rem;
     margin-left: 20%;
-    margin-right: 20%;;
+    margin-right: 20%;
 }
+
 /* Projects Section */
 .projects-section {
     padding: 2rem;
@@ -94,10 +95,12 @@ a:hover {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Small margins between the cards */
     padding: 0 2rem;
+    margin-bottom: 20px;
+    justify-content: space-around;
 }
 
 .project-card {
@@ -105,9 +108,14 @@ a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    width: 25vw; /* Fixed width */
+    height: 300px; /* Fixed height */
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    display: flex; /* For centering content */
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -117,7 +125,7 @@ a:hover {
 
 .project-image {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0.5rem;
@@ -133,4 +141,18 @@ a:hover {
 .project-description {
     font-size: 1rem;
     color: #666;
+    margin-top: auto;
+}
+
+/* Responsive Design: Adjust for Smaller Screens */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row for small screens */
+    }
 }
