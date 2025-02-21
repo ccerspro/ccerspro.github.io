@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="intro-text">
-      <p>This is a game heavily inspired from "The Exit 8" by KOTAKE CREATE. I made this game with Unity and this is also a work for a game jam event. The  development period of this game is 3 days. Very limited structure change were made compare to THE EXIT 8 as my goal here is mainly to replica the interesting endless walkway scene.<br>
-        Please play this on a PC! Also here is the <a href="https://github.com/ccerspro/The-Room-408.git" target="_blank">link</a> to the github repo of this game if you want to download it and play it on local</p></totaldiv>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -60,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Game.loader.js";
+      var loaderUrl = buildUrl + "/Webgame.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Game.data",
-        frameworkUrl: buildUrl + "/Game.framework.js",
-        codeUrl: buildUrl + "/Game.wasm",
+        dataUrl: buildUrl + "/Webgame.data",
+        frameworkUrl: buildUrl + "/Webgame.framework.js",
+        codeUrl: buildUrl + "/Webgame.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Weilun Production",
         productName: "The Room 408",
