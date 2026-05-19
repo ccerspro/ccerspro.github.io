@@ -12,101 +12,179 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The personal portfolio of Weilun Zhou. Explore my projects, skills, and contact information.">
-  <title>Weilun Zhou Portfolio Homepage</title>
+  <meta name="description" content="The portfolio of Weilun Zhou, a game developer and computer science graduate specializing in Unity, C#, gameplay systems, and web development.">
+  <title>Weilun Zhou | Game Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    function setLanguage(lang) {
-      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-      document.querySelectorAll(`.lang.${lang}`).forEach(el => el.style.display = 'block');
-    }
-    window.onload = () => setLanguage('en');
-  </script>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">ZW</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Weilun Zhou homepage">
+      <span class="brand-mark">ZW</span>
+      <span class="brand-text">Weilun Zhou</span>
+    </a>
+
     <div class="header-controls">
-      <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="first resume.pdf" target="_blank" class="resume-button">Resume</a>
-        <a href="#contact-info">Contact </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="first resume.pdf" target="_blank" rel="noopener" data-i18n="navResume">Resume</a>
+        <a href="#contact-info" data-i18n="navContact">Contact</a>
       </nav>
-      <div class="lang-switch">
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('zh')">中</button>
+
+      <div class="lang-switch" aria-label="Language selector">
+        <button type="button" class="active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
       </div>
     </div>
   </header>
 
-  <main class="main-content">
-    <div class="profile">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture">
-    </div>
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Game Developer · C# Programmer · Web Builder</p>
+        <h1 id="hero-title" data-i18n="heroTitle">I build playable systems, atmospheric levels, and polished interactive experiences.</h1>
+        <p class="hero-description" data-i18n="heroDescription">
+          I am Weilun Zhou, a Computer and Information Science graduate from The Ohio State University. My work focuses on Unity gameplay, UI development, level design, Monogame prototypes, and full-stack web projects.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects" data-i18n="viewProjects">View Projects</a>
+          <a class="button button-secondary" href="first resume.pdf" target="_blank" rel="noopener" data-i18n="downloadResume">Open Resume</a>
+        </div>
+      </div>
 
-    <div class="lang en">
-      <p class="intro-text">
-        Hey, I'm <span class="highlight">Weilun Zhou</span>. I'm a Computer and Information Science major graduate from The Ohio State University, class of 2025. I specialize in programming and game design. I have experience with UI development, 3D level design, Unity script development, and Monogame development.<br><br>
-        I also have experience with Web development in both front-end and back-end, including developing and maintaining a web app using Ruby on Rails. My most comfortable programming language is C#. I am also familiar with C++, Python, JavaScript, Java, Ruby, and HTML/CSS.<br><br>
-        Beyond game dev, I am passionate about gaming itself. I enjoy exploring different genres of games, analyzing game mechanics, and continuously learning to enhance my craft. I have several solo projects as well as team projects from my time at OSU.<br><br>
-        Below, you'll find my personal projects and demos, each reflecting my journey as a game developer and computer science student. Feel free to explore, and don't hesitate to reach out!
-      </p>
-    </div>
+      <aside class="profile-panel" aria-label="Profile summary">
+        <div class="profile-image-wrap">
+          <img src="images/profile.jpg" alt="Portrait of Weilun Zhou" class="profile-picture">
+        </div>
+        <div class="profile-meta">
+          <span data-i18n="location">Columbus, Ohio / Wuhan, China</span>
+          <strong data-i18n="availability">Open to game development and software roles</strong>
+        </div>
+      </aside>
+    </section>
 
-    <div class="lang zh" style="display:none;">
-      <p class="intro-text">
-        你好，我是<span class="highlight">周伟伦</span>。我毕业于俄亥俄州立大学（The Ohio State University），主修计算机与信息科学，2025年届。我专注于编程与游戏设计，具备用户界面开发、3D关卡设计、Unity脚本开发和Monogame开发经验。<br><br>
-        我还具备前端与后端网页开发经验，曾使用 Ruby on Rails 开发并维护 Web 应用程序。我最擅长的编程语言是 C#，同时熟悉 C++、Python、JavaScript、Java、Ruby 以及 HTML/CSS。<br><br>
-        除了开发，我也非常热爱游戏本身。我喜欢探索不同类型的游戏，分析游戏机制，不断学习以提升技能。我完成了多个个人项目，也参与了在 OSU 的团队项目。<br><br>
-        以下是我的个人项目和演示作品，欢迎浏览，有任何问题欢迎联系我！
-      </p>
-    </div>
-
-    <section id="works" class="work-intro"></section>
-
-    <section id="projects" class="projects-section">
-      <h2 class="section-title lang en">My Projects</h2>
-      <h2 class="section-title lang zh" style="display:none;">我的项目</h2>
-      <div class="projects-grid">
-        <a href="games/the-room-408/index.html" class="project-link">
-          <div class="project-card">
-            <img src="images/The_Room_408.png" alt="Project 1" class="project-image">
-            <h3 class="project-title">The Room 408</h3>
-            <p class="project-description lang en">A Unity project inspired by The Exit 8.</p>
-            <p class="project-description lang zh" style="display:none;">受 The Exit 8 启发的 Unity 心理观察游戏。</p>
-          </div>
-        </a>
-        <a href="games/5912-game/index.html" class="project-link">
-          <div class="project-card">
-            <img src="images/lunar_lock_poster.png" alt="Project 2" class="project-image">
-            <h3 class="project-title">Lunar Lock</h3>
-            <p class="project-description lang en">First-person platformer delivering a diverse set of actions. Available for Windows.</p>
-            <p class="project-description lang zh" style="display:none;">第一人称平台跳跃游戏，包含多种动作组合。支持 Windows。</p>
-          </div>
-        </a>
-        <a href="https://ccerspro.itch.io/project-x" class="project-link">
-          <div class="project-card">
-            <img src="images/projectx_cover.png" alt="Project 3" class="project-image">
-            <h3 class="project-title">PROJECT X</h3>
-            <p class="project-description lang en">A conceptual first-person psychological horror game developed in Unity 3D.</p>
-            <p class="project-description lang zh" style="display:none;">概念型第一人称心理恐怖游戏，使用 Unity 3D 开发。</p>
-          </div>
-        </a>
+    <section class="about-band">
+      <div class="section-shell about-grid">
+        <div>
+          <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
+          <h2 data-i18n="aboutTitle">Technical, gameplay-minded, and comfortable across the stack.</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="aboutTextOne">
+            I specialize in programming and game design, with hands-on experience in UI development, 3D level design, Unity scripting, and Monogame development.
+          </p>
+          <p data-i18n="aboutTextTwo">
+            I have also built and maintained web applications with front-end and back-end responsibilities, including Ruby on Rails. My strongest language is C#, and I also work with C++, Python, JavaScript, Java, Ruby, HTML, and CSS.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="contact-info">
-      <h2 class="section-title lang en">Contact</h2>
-      <h2 class="section-title lang zh" style="display:none;">联系方式</h2>
-      <p class="lang en">Email: zhou.3885@osu.edu</p>
-      <p class="lang zh" style="display:none;">邮箱：zhou.3885@osu.edu</p>
-      <p><a href="https://www.linkedin.com/in/weilun-zhou" target="_blank">LinkedIn</a></p>
-      <p><a href="https://github.com/ccerspro" target="_blank">GitHub</a></p>
-      <p class="lang en">Phone (US): +1 380-213-2640</p>
-      <p class="lang zh" style="display:none;">电话（美国）：+1 380-213-2640</p>
-      <p class="lang en">Phone (China): +86 159-2770-9314</p>
-      <p class="lang zh" style="display:none;">电话（中国）：+86 159-2770-9314</p>
+    <section class="studio-band section-shell" aria-labelledby="studio-title">
+      <div class="studio-logo-panel" aria-label="Chaotic System logo">
+        <img src="images/logo.png" alt="Chaotic System logo" class="studio-logo">
+      </div>
+
+      <div class="studio-copy">
+        <p class="eyebrow" data-i18n="studioEyebrow">Solo Studio</p>
+        <h2 id="studio-title" data-i18n="studioTitle">Chaotic System is my own independent game studio label.</h2>
+        <p data-i18n="studioText">
+          A home for the games I design, program, and ship as a solo developer, with a focus on psychological horror, systemic interaction, and atmospheric player experience.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills section-shell" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="skillsEyebrow">Focus</p>
+        <h2 id="skills-title" data-i18n="skillsTitle">Core Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-index">01</span>
+          <h3 data-i18n="skillGameplayTitle">Gameplay Programming</h3>
+          <p data-i18n="skillGameplayText">Unity C# systems, player controllers, game states, interaction logic, and prototype iteration.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-index">02</span>
+          <h3 data-i18n="skillDesignTitle">Level & Experience Design</h3>
+          <p data-i18n="skillDesignText">3D spaces, player pacing, environmental storytelling, horror observation loops, and readable layouts.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-index">03</span>
+          <h3 data-i18n="skillWebTitle">Web Development</h3>
+          <p data-i18n="skillWebText">Responsive front ends, JavaScript interactions, Ruby on Rails experience, and maintainable UI structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <div class="section-heading projects-heading">
+          <div>
+            <p class="eyebrow" data-i18n="projectsEyebrow">Selected Work</p>
+            <h2 id="projects-title" data-i18n="projectsTitle">Projects</h2>
+          </div>
+          <p data-i18n="projectsIntro">Playable builds, prototypes, and game-focused experiments using the assets already hosted in this portfolio.</p>
+        </div>
+
+        <div class="projects-grid">
+          <a href="games/the-room-408/index.html" class="project-card featured">
+            <img src="images/The_Room_408.png" alt="The Room 408 gameplay preview" class="project-image">
+            <div class="project-content">
+              <span class="project-type">Unity · Horror</span>
+              <h3>The Room 408</h3>
+              <p data-i18n="roomDescription">A psychological observation game inspired by The Exit 8, built around noticing subtle environmental changes.</p>
+            </div>
+          </a>
+
+          <a href="games/5912-game/index.html" class="project-card">
+            <img src="images/lunar_lock_poster.png" alt="Lunar Lock poster" class="project-image">
+            <div class="project-content">
+              <span class="project-type">Unity · Platformer</span>
+              <h3>Lunar Lock</h3>
+              <p data-i18n="lunarDescription">A first-person platformer for Windows with a diverse action set and spatial movement challenges.</p>
+            </div>
+          </a>
+
+          <a href="https://ccerspro.itch.io/project-x" target="_blank" rel="noopener" class="project-card">
+            <img src="images/projectx_cover.png" alt="Project X cover art" class="project-image">
+            <div class="project-content">
+              <span class="project-type">Unity · Concept</span>
+              <h3>PROJECT X</h3>
+              <p data-i18n="projectXDescription">A conceptual first-person psychological horror game exploring atmosphere, tension, and spatial unease.</p>
+            </div>
+          </a>
+
+          <a href="games/space_adventure/index.html" class="project-card">
+            <img src="images/space_adventure.png" alt="Space Adventure gameplay preview" class="project-image">
+            <div class="project-content">
+              <span class="project-type">WebGL · Game</span>
+              <h3>Space Adventure</h3>
+              <p data-i18n="spaceDescription">A browser-playable WebGL project focused on fast access and lightweight interactive presentation.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-info" class="contact-section section-shell" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 id="contact-title" data-i18n="contactTitle">Let’s talk about games, tools, or software roles.</h2>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:zhou.3885@osu.edu">zhou.3885@osu.edu</a>
+          <a href="https://www.linkedin.com/in/weilun-zhou" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ccerspro" target="_blank" rel="noopener">GitHub</a>
+          <span data-i18n="phoneUs">US: +1 380-213-2640</span>
+          <span data-i18n="phoneChina">China: +86 130-1182-1324</span>
+        </div>
+      </div>
     </section>
   </main>
 </body>
