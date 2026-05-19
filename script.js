@@ -46,7 +46,7 @@ const translations = {
     heroDescription: "我是周伟伦，毕业于俄亥俄州立大学计算机与信息科学专业。我的作品聚焦 Unity 玩法开发、UI 开发、关卡设计、Monogame 原型，以及全栈 Web 项目。",
     viewProjects: "查看项目",
     downloadResume: "打开简历",
-    location: "美国俄亥俄哥伦布 / 中国武汉",
+    location: "美国俄亥俄哥伦布 / 中国北京",
     availability: "正在寻找游戏开发与软件开发相关机会",
     aboutEyebrow: "关于",
     aboutTitle: "技术扎实，理解玩法，也能跨栈完成产品。",

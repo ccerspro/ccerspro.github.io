@@ -1,7 +1,10 @@
 const dictionary = {
   en: {
+    gameTitle: "Ling House: Echoes Within",
+    homeLabel: "Ling House: Echoes Within press kit home",
+    pageTitle: "Ling House: Echoes Within | Press Kit",
     pressKit: "Press Kit",
-    tagline: "A first-person psychological horror set inside a villa that remembers you.",
+    tagline: "A first-person psychological horror set inside a haunted house. Inspired by P.T. and partially based on true events.",
     downloadKit: "Download Asset Kit (ZIP)",
     steam: "Steam Store Page",
     keyArtAlt: "Key art for Ling House: Echoes Within",
@@ -40,8 +43,11 @@ const dictionary = {
     closePreview: "Close preview"
   },
   zh: {
+    gameTitle: "灵宅：回音缭绕",
+    homeLabel: "《灵宅：回音缭绕》媒体资料包首页",
+    pageTitle: "灵宅：回音缭绕 | 媒体资料包",
     pressKit: "媒体资料包",
-    tagline: "一款发生在会记住你的别墅中的第一人称心理恐怖游戏。",
+    tagline: "一款定点在灵宅中的第一人称心理恐怖游戏，灵感来源于 P.T. 和部分真实事件改编。",
     downloadKit: "下载素材包 (ZIP)",
     steam: "Steam 商店页面",
     keyArtAlt: "《灵宅：回音缭绕》主视觉图",
@@ -80,11 +86,14 @@ const dictionary = {
     closePreview: "关闭预览"
   },
   ja: {
+    gameTitle: "霊宅：回音繚繞",
+    homeLabel: "『霊宅：回音繚繞』プレスキットのホーム",
+    pageTitle: "霊宅：回音繚繞 | プレスキット",
     pressKit: "プレスキット",
-    tagline: "あなたを記憶するヴィラを舞台にした一人称視点のサイコロジカルホラー。",
+    tagline: "あなたを記憶するヴィラを舞台にした一人称視点のサイコロジカルホラー。P.T. と一部の真実事件に基づいています。",
     downloadKit: "素材キットをダウンロード (ZIP)",
     steam: "Steam ストアページ",
-    keyArtAlt: "『灵宅：回音缭绕』キーアート",
+    keyArtAlt: "『霊宅：回音繚繞』キーアート",
     watch: "視聴",
     trailerTitle: "公式トレーラー",
     factsEyebrow: "資料",
@@ -121,7 +130,7 @@ const dictionary = {
   }
 };
 
-const DISCORD_INVITE_URL = "https://discord.gg/";
+const DISCORD_INVITE_URL = "https://discord.gg/EuKyvj3SqJ";
 const QQ_GROUP_NUMBER = "1101760857";
 
 const trailerEmbeds = {
@@ -182,6 +191,7 @@ function applyLanguage(lang) {
   const strings = dictionary[lang] || dictionary.en;
   currentLang = lang;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+  document.title = strings.pageTitle;
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
