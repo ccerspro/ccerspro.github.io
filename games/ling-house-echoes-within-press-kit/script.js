@@ -4,7 +4,7 @@ const dictionary = {
     homeLabel: "Ling House: Echoes Within press kit home",
     pageTitle: "Ling House: Echoes Within | Press Kit",
     pressKit: "Press Kit",
-    tagline: "A first-person psychological horror set inside a haunted house. Inspired by P.T. and partially based on true events.",
+    tagline: "A PT inspired first-person psychological horror with a video camera that allow player to see ghosts and a purgatory realm. Linear story with a focus on atmosphere and narrative. Developed solo by an indie developer.",
     downloadKit: "Download Asset Kit (ZIP)",
     steam: "Steam Store Page",
     keyArtAlt: "Key art for Ling House: Echoes Within",
@@ -14,7 +14,7 @@ const dictionary = {
     factsTitle: "Fact Sheet",
     developer: "Developer",
     releaseDate: "Release Date",
-    releaseValue: "June 2026",
+    releaseValue: "Q3 2026",
     genre: "Genre",
     genreValue: "Psychological Horror",
     platform: "Platform",
@@ -27,11 +27,11 @@ const dictionary = {
     featuresTitle: "Core Features",
     mediaEyebrow: "Media",
     mediaTitle: "Screenshots",
-    shortDescription: "Reality fractures within a house that feels hauntingly familiar. Ling House: Echoes Within is a first-person psychological horror. Navigate a shifting villa to uncover the tragedy hidden in the walls. In a place that defies logic, the greatest threat may be your own memory.",
+    shortDescription: "Ling House: Echoes Within is a first-person psychological horror experience. Uncover the hidden tragedy beneath the surface of a haunted house. As reality breaks down, your video camera reveals images of an alternate space. You must see through the connection between both worlds to escape.",
     features: [
-      "A Living, Shifting Villa: The environment responds to your presence. Witness time and space warp before your eyes.",
-      "Observe Anomalies: Spot illogical deviations to identify danger and unearth hidden critical information.",
-      "Fractured Sanity: Immerse yourself in the terrors of the past, present, and future to piece together a bloody truth."
+      "A Living, Shifting House: The environment is constantly changing as you explore. You never know what you're going to walk into when opening a door or turning a corner.",
+      "Psychic video camera: As the house itself starts to fill with objects that should not be there, your camera reflects a mysterious alternate space that differs from reality.",
+      "Psychological horror: There will be long atmopheric build-up and moments of intense horror. You must immerse yourself in the fears of the past, present, and future, trying to piece together the terrifying truth."
     ],
     screenshotAlt1: "Ling House screenshot 1",
     screenshotAlt2: "Ling House screenshot 2",
@@ -39,6 +39,8 @@ const dictionary = {
     screenshotAlt4: "Ling House screenshot 4",
     screenshotAlt5: "Ling House screenshot 5",
     screenshotAlt6: "Ling House screenshot 6",
+    logoTitle: "Logo",
+    logoAlt: "assets/screenshots/logo-en.png",
     lightboxLabel: "Screenshot preview",
     closePreview: "Close preview"
   },
@@ -47,7 +49,7 @@ const dictionary = {
     homeLabel: "《灵宅：回音缭绕》媒体资料包首页",
     pageTitle: "灵宅：回音缭绕 | 媒体资料包",
     pressKit: "媒体资料包",
-    tagline: "一款定点在灵宅中的第一人称心理恐怖游戏，灵感来源于 P.T. 和部分真实事件改编。",
+    tagline: "一款类PT的第一人称心理恐怖游戏，配备通灵摄像机让玩家看到鬼魂和灵界，线性叙事，注重氛围和故事，由独立开发者单人开发。",
     downloadKit: "下载素材包 (ZIP)",
     steam: "Steam 商店页面",
     keyArtAlt: "《灵宅：回音缭绕》主视觉图",
@@ -57,7 +59,7 @@ const dictionary = {
     factsTitle: "信息表",
     developer: "开发者",
     releaseDate: "发行日期",
-    releaseValue: "2026 年 6 月",
+    releaseValue: "2026 年第三季度",
     genre: "类型",
     genreValue: "心理恐怖",
     platform: "平台",
@@ -70,11 +72,12 @@ const dictionary = {
     featuresTitle: "核心特色",
     mediaEyebrow: "媒体",
     mediaTitle: "游戏截图",
-    shortDescription: "现实在令人惊愕的熟悉感中崩塌。《灵宅：回音缭绕》是一款第一人称心理恐怖体验。在一座不断变化扭曲的别墅中，揭开深藏在墙壁背后的悲剧。当建筑本身开始传递过去的回声，你找回的是遗失的真相，还是更深的梦魇？",
+    shortDescription: "现实在令人惊愕的熟悉感中崩塌。《灵宅：回音缭绕》是一款第一人称心理恐怖体验。在一座不断变化扭曲的别墅中，揭开深藏在建筑表面下的悲剧。当建筑本身开始传递过去的回声，你的摄像机中映照出与现实不同的神秘空间的画面，你需要看穿两个世界之间的联系，离开别墅。",
     features: [
-      "活生生的扭曲别墅：环境会响应你的存在。你将见证时间和空间在你眼前扭曲。",
-      "观察逻辑异象：你需要通过观察那些违背逻辑的“异象”来辨别危险。",
-      "交织的破碎记忆：你必须浸入过去、现在和未来的所有恐惧中，尝试拼凑出可怕的真相。"
+      "不断变化的别墅：环境会随着游戏进行不断变化。每次开门或转弯，你都不知道会遇到什么。",
+      "通灵摄像机：当建筑开始不断扭曲且充斥着不应该存在的物体，你的摄像机中映照出与现实不同的神秘空间的画面。",
+      "心理恐怖：游戏将有长时间的氛围营造和强烈的恐怖时刻。你必须沉浸在过去、现在和未来的恐怖中，试图拼凑出令人毛骨悚然的真相。"
+
     ],
     screenshotAlt1: "《灵宅：回音缭绕》截图 1",
     screenshotAlt2: "《灵宅：回音缭绕》截图 2",
@@ -82,6 +85,8 @@ const dictionary = {
     screenshotAlt4: "《灵宅：回音缭绕》截图 4",
     screenshotAlt5: "《灵宅：回音缭绕》截图 5",
     screenshotAlt6: "《灵宅：回音缭绕》截图 6",
+    logoTitle: "Logo",
+    logoAlt: "《灵宅：回音缭绕》标志",
     lightboxLabel: "截图预览",
     closePreview: "关闭预览"
   },
@@ -90,7 +95,7 @@ const dictionary = {
     homeLabel: "『霊宅：回音繚繞』プレスキットのホーム",
     pageTitle: "霊宅：回音繚繞 | プレスキット",
     pressKit: "プレスキット",
-    tagline: "あなたを記憶するヴィラを舞台にした一人称視点のサイコロジカルホラー。P.T. と一部の真実事件に基づいています。",
+    tagline: "PTにインスパイアされた一人称視点のサイコホラー。ビデオカメラで幽霊や異空間が見える。線形ストーリーで、雰囲気と物語に重点を置いている。インディーデベロッパーによるソロ開発。",
     downloadKit: "素材キットをダウンロード (ZIP)",
     steam: "Steam ストアページ",
     keyArtAlt: "『霊宅：回音繚繞』キーアート",
@@ -100,7 +105,7 @@ const dictionary = {
     factsTitle: "ファクトシート",
     developer: "開発者",
     releaseDate: "リリース日",
-    releaseValue: "2026年6月",
+    releaseValue: "2026年第3四半期",
     genre: "ジャンル",
     genreValue: "サイコロジカルホラー",
     platform: "プラットフォーム",
@@ -113,11 +118,11 @@ const dictionary = {
     featuresTitle: "主な特徴",
     mediaEyebrow: "メディア",
     mediaTitle: "スクリーンショット",
-    shortDescription: "见覚えのある家の中で现实が崩坏していく。『灵宅：回音缭绕』は一人称视点のサイコロジカルホラーです。绝えず変化するヴィラを探索し、壁に隐された悲剧を暴き出せ。论理が通用しない场所で、最大の胁威はあなた自身の记忆かもしれません。",
+    shortDescription: "驚くほどの親近感の中で現実が崩壊していく。『霊宅：回音繚繞』は、一人称視点のサイコホラー体験。歪んでいく別荘で、表面下に隠された悲劇を暴け。建物が過去の残響を伝え、ビデオカメラが現実とは異なる神秘的な異空間を映し出すとき、2つの世界のつながりを見抜き、脱出せよ。",
     features: [
-      "生きている邸宅：环境があなたの存在に反应します。目の前で时间と空间が歪むのを目击することになるでしょう。",
-      "异变（アノマリー）の观察：非论理的な异变を观察して危険を察知し、その下に隐された重要な情報を掘り起こしてください。",
-      "崩坏しつつある正気：过去、现在、そして未来の恐怖に身を投じ、粉々に碎けた真実を繋ぎ合わせなければなりません。"
+      "生きているように変化する家：環境は探索するにつれて絶えず変化します。ドアを開けたり、角を曲がったりするとき、何に出会うかわかりません。",
+      "サイキックビデオカメラ：建物自体が存在してはいけない物で満たされ始めると、カメラは現実とは異なる神秘的な異空間の映像を映し出します。",
+      "心理的ホラー：長い雰囲気の構築と強烈なホラーの瞬間があります。過去、現在、未来の恐怖に没頭し、ぞっとするような真実を組み立てる必要があります。"
     ],
     screenshotAlt1: "『灵宅：回音缭绕』スクリーンショット 1",
     screenshotAlt2: "『灵宅：回音缭绕』スクリーンショット 2",
@@ -125,6 +130,8 @@ const dictionary = {
     screenshotAlt4: "『灵宅：回音缭绕』スクリーンショット 4",
     screenshotAlt5: "『灵宅：回音缭绕』スクリーンショット 5",
     screenshotAlt6: "『灵宅：回音缭绕』スクリーンショット 6",
+    logoTitle: "ロゴ",
+    logoAlt: "『霊宅：回音繚繞』ロゴ",
     lightboxLabel: "スクリーンショットプレビュー",
     closePreview: "プレビューを閉じる"
   }
@@ -132,10 +139,9 @@ const dictionary = {
 
 const DISCORD_INVITE_URL = "https://discord.gg/EuKyvj3SqJ";
 const QQ_GROUP_NUMBER = "1101760857";
-
 const trailerEmbeds = {
   youtube: {
-    src: "https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1",
+    src: "https://www.youtube.com/embed/dNekECIwhOo?rel=0&modestbranding=1",
     title: "Ling House: Echoes Within trailer on YouTube"
   },
   bilibili: {
@@ -149,10 +155,17 @@ const featuresList = document.getElementById("featuresList");
 const trailerContainer = document.getElementById("trailerContainer");
 const communityLabel = document.getElementById("communityLabel");
 const communityValue = document.getElementById("communityValue");
+const logoImage = document.getElementById("logoImage");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
 let currentLang = "en";
+
+const logoImages = {
+  en: "assets/screenshots/logo-en.png",
+  zh: "assets/screenshots/logo-zh.png",
+  ja: "assets/screenshots/logo-en.png"
+};
 
 function setTrailer(lang) {
   const provider = lang === "zh" ? trailerEmbeds.bilibili : trailerEmbeds.youtube;
@@ -215,6 +228,10 @@ function applyLanguage(lang) {
     item.textContent = feature;
     featuresList.appendChild(item);
   });
+
+  if (logoImage) {
+    logoImage.src = logoImages[lang] || logoImages.en;
+  }
 
   langButtons.forEach((button) => {
     const isActive = button.dataset.lang === lang;

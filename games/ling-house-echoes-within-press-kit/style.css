@@ -436,6 +436,27 @@ h3 {
   gap: 1rem;
 }
 
+.logo-section {
+  margin-top: 2rem;
+}
+
+.logo-preview {
+  overflow: hidden;
+  background: #111113;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  aspect-ratio: 3 / 1;
+}
+
+.logo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  background: #050506;
+}
+
 .media-card {
   position: relative;
   overflow: hidden;
