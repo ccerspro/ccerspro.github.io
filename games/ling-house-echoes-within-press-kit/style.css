@@ -159,6 +159,14 @@ img {
   z-index: 2;
 }
 
+.hero-note {
+  margin: 0 0 1rem;
+  color: var(--crimson-bright);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
 .eyebrow {
   margin: 0 0 0.85rem;
   color: var(--crimson-bright);
