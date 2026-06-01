@@ -164,11 +164,18 @@ const featuresList = document.getElementById("featuresList");
 const trailerContainer = document.getElementById("trailerContainer");
 const communityLabel = document.getElementById("communityLabel");
 const communityValue = document.getElementById("communityValue");
+const downloadKitLink = document.getElementById("downloadKitLink");
 const logoImage = document.getElementById("logoImage");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
 let currentLang = "en";
+
+const downloadKitUrls = {
+  en: "https://drive.google.com/drive/folders/1W9VdnPCBTqMvvbnxa0urvEdDwNP7Btoo?usp=sharing",
+  zh: "https://drive.google.com/drive/folders/PLACEHOLDER-ZH?usp=drive_link",
+  ja: "https://drive.google.com/drive/folders/PLACEHOLDER-JA?usp=drive_link"
+};
 
 const logoImages = {
   en: "assets/screenshots/logo-en.png",
@@ -240,6 +247,10 @@ function applyLanguage(lang) {
 
   if (logoImage) {
     logoImage.src = logoImages[lang] || logoImages.en;
+  }
+
+  if (downloadKitLink) {
+    downloadKitLink.href = downloadKitUrls[lang] || downloadKitUrls.en;
   }
 
   langButtons.forEach((button) => {
