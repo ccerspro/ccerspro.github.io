@@ -88,11 +88,12 @@
       }
 
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/WEB.loader.js";
+      const buildVersion = "20260719";
+      const loaderUrl = buildUrl + "/WEB.loader.js?v=" + buildVersion;
       const config = {
-        dataUrl: buildUrl + "/WEB.data",
-        frameworkUrl: buildUrl + "/WEB.framework.js",
-        codeUrl: buildUrl + "/WEB.wasm",
+        dataUrl: buildUrl + "/WEB.data?v=" + buildVersion,
+        frameworkUrl: buildUrl + "/WEB.framework.js?v=" + buildVersion,
+        codeUrl: buildUrl + "/WEB.wasm?v=" + buildVersion,
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Weilun Production",
         productName: "The Room 408",
