@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Last Shift 末班车：带着事故证据穿过封控物流站，恢复供电，赶上最后一班转运车。">
+	<meta name="theme-color" content="#101b20">
+	<title>Last Shift · 末班车</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="back-link" href="../../index.html" aria-label="返回主页">← <span>主页</span></a>
+		<a class="wordmark" href="#top" aria-label="Last Shift 末班车">
+			<span class="wordmark-name">LAST SHIFT</span>
+			<span class="wordmark-divider"></span>
+			<span class="wordmark-cn">末班车</span>
+		</a>
+		<span class="platform-label"><span class="status-light"></span> UNITY WEBGL</span>
+	</header>
+
+	<main id="top">
+		<section class="game-shell" aria-labelledby="game-title">
+			<div class="game-heading">
+				<div>
+					<p class="eyebrow">NIGHT ROUTE / TERMINAL 07</p>
+					<h1 id="game-title">Last Shift <span>末班车</span></h1>
+				</div>
+				<p class="game-summary">带着事故证据穿过封控的物流站，在最后一班转运车离开前活着抵达。</p>
+			</div>
+
+			<div class="game-frame" id="game-frame">
+				<canvas id="unity-canvas" width="1920" height="1080" tabindex="0" aria-label="Last Shift 末班车游戏画面"></canvas>
+				<div class="loading-panel" id="loading-panel" role="status" aria-live="polite">
+					<span class="loading-kicker">TERMINAL 07 / SYSTEM STARTUP</span>
+					<h2>正在接入末班线路</h2>
+					<p id="loading-message">物流站系统启动中，请稍候……</p>
+					<progress id="loading-progress" value="0" max="1" aria-label="游戏加载进度"></progress>
+				</div>
+			</div>
+
+			<div class="game-toolbar">
+				<span class="objective"><span class="objective-mark"></span> OBJECTIVE <strong>带出证据，赶上末班车</strong></span>
+				<button id="fullscreen" type="button" title="全屏游玩">全屏游玩 <span aria-hidden="true">↗</span></button>
+			</div>
+
+			<section class="controls" aria-label="游戏操作与目标">
+				<div class="controls-heading">
+					<p class="eyebrow">FIELD GUIDE</p>
+					<h2>操作指南</h2>
+				</div>
+				<dl class="control-list">
+					<div><dt>移动</dt><dd><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></dd></div>
+					<div><dt>瞄准 / 射击</dt><dd>鼠标 / <kbd>左键</kbd></dd></div>
+					<div><dt>交互 / 诱饵</dt><dd><kbd>E</kbd> / <kbd>Q</kbd></dd></div>
+					<div><dt>切换武器</dt><dd><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd></dd></div>
+					<div><dt>暂停</dt><dd><kbd>Esc</kbd></dd></div>
+				</dl>
+				<p class="device-note">建议使用电脑端 Chrome 或 Edge，并通过鼠标和键盘游玩。</p>
+			</section>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<a href="OFL.txt" target="_blank" rel="noopener">字体许可</a>
+		<span>LAST SHIFT <span class="footer-separator">/</span> 末班车</span>
+	</footer>
+
+	<script>
+		const canvas = document.querySelector("#unity-canvas");
+		const loadingPanel = document.querySelector("#loading-panel");
+		const loadingMessage = document.querySelector("#loading-message");
+		const progress = document.querySelector("#loading-progress");
+		const config = {
+			dataUrl: "Build/Build.data.unityweb",
+			frameworkUrl: "Build/Build.framework.js.unityweb",
+			codeUrl: "Build/Build.wasm.unityweb",
+			streamingAssetsUrl: "StreamingAssets",
+			companyName: "末班清点项目组",
+			productName: "末班清点：静音撤离",
+			productVersion: "1.1",
+			showBanner: (message, type) => {
+				if (type === "error") {
+					console.error(message);
+					loadingPanel.classList.add("loading-error");
+					loadingMessage.textContent = "游戏加载失败，请检查网络后刷新。建议使用电脑端 Chrome 或 Edge。";
+				}
+			}
+		};
+
+		const loader = document.createElement("script");
+		loader.src = "Build/Build.loader.js";
+		loader.onload = () => {
+			createUnityInstance(canvas, config, (value) => {
+				progress.value = value;
+			}).then((instance) => {
+				window.unityInstance = instance;
+				loadingPanel.hidden = true;
+				document.querySelector("#fullscreen").addEventListener("click", () => instance.SetFullscreen(1));
+			}).catch((error) => {
+				console.error(error);
+				loadingPanel.classList.add("loading-error");
+				loadingMessage.textContent = "物流站加载失败，请检查网络后刷新页面。";
+			});
+		};
+		loader.onerror = () => {
+			loadingPanel.classList.add("loading-error");
+			loadingMessage.textContent = "无法下载游戏文件，请检查网络连接后刷新页面。";
+		};
+		document.body.appendChild(loader);
+		canvas.addEventListener("pointerdown", () => canvas.focus());
+	</script>
+</body>
+</html>

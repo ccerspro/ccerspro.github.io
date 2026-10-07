@@ -526,6 +526,58 @@ h2 {
   transform: scale(1.035);
 }
 
+.last-shift-art {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, transparent 49.8%, rgba(224, 80, 58, 0.22) 50%, transparent 50.3%),
+    radial-gradient(ellipse at 78% 30%, rgba(202, 83, 59, 0.34), transparent 36%),
+    linear-gradient(145deg, #27383b 0%, #172226 48%, #101518 100%);
+  color: #f0e8d7;
+}
+
+.last-shift-art::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    repeating-linear-gradient(0deg, transparent 0 38px, rgba(207, 218, 197, 0.09) 39px 40px),
+    linear-gradient(110deg, transparent 0 67%, rgba(207, 218, 197, 0.12) 67.2% 67.5%, transparent 67.8%),
+    linear-gradient(70deg, transparent 0 79%, rgba(207, 218, 197, 0.1) 79.2% 79.5%, transparent 79.8%);
+  opacity: 0.6;
+}
+
+.last-shift-stamp,
+.last-shift-title,
+.last-shift-caption {
+  position: relative;
+  z-index: 1;
+}
+
+.last-shift-stamp,
+.last-shift-caption {
+  color: #f09a73;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.last-shift-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.last-shift-title span {
+  display: block;
+}
+
 .project-card::after {
   position: absolute;
   inset: 0;
